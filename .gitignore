@@ -1,0 +1,11 @@
+.git
+.idea
+
+target
+*/target
+
+*.class
+*.iml
+
+*/fileroot
+*/logs
