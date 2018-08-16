@@ -29,7 +29,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     
@@ -151,6 +151,34 @@
 			<version>${jackson-databind.version}</version>
 		</dependency>
 		<!-- jackson-databind config end -->
+
+		  <!-- Redis客户端 -->
+		  <dependency>
+			  <groupId>redis.clients</groupId>
+			  <artifactId>jedis</artifactId>
+			  <version>2.9.0</version>
+		  </dependency>
+		  <!-- redis Spring 基于注解配置 -->
+		  <dependency>
+			  <groupId>org.springframework.data</groupId>
+			  <artifactId>spring-data-redis</artifactId>
+			  <version>1.7.2.RELEASE</version>
+		  </dependency>
+
+		<!-- httpclient -->
+		<dependency>
+		  <groupId>org.apache.httpcomponents</groupId>
+		  <artifactId>httpclient</artifactId>
+		  <version>4.5.2</version>
+		</dependency>
+
+	  	<!--jsonlib-->
+	  	<dependency>
+		  <groupId>net.sf.json-lib</groupId>
+		  <artifactId>json-lib</artifactId>
+		  <version>2.4</version>
+		  <classifier>jdk15</classifier>
+	  	</dependency>
 		
 		
 		<dependency>

@@ -50,11 +50,6 @@
 		<!-- <property name="filters" value="stat" /> -->
 	</bean>
 
-	<!-- 声明事务管理 -->
-	<bean id="txManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
 	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
 	<bean id="mySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -67,6 +62,12 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.whyixiu.erp.dao" />
 		<property name="sqlSessionFactoryBeanName" value="mySqlSessionFactory" />
+	</bean>
+
+	<!-- 声明事务管理 -->
+	<bean id="txManager"
+		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 
 	<!-- 扫描事物注解 -->
